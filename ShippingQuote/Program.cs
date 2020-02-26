@@ -22,9 +22,9 @@ namespace ShippingQuote
                 Console.Write("Package length: ");
                 double length = Convert.ToDouble(Console.ReadLine());
 
-                if ((width + height + length) <+ 50)
+                if ((width + height + length) <= 50)
                 {
-                    double quote = width * height * length / 100;
+                    double quote = width * height * length * weight / 100;
                     Console.WriteLine("Your estimated total for shipping this package is: $" + quote.ToString());
                 }
                 else
